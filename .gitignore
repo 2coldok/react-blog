@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# 설계과정이 담긴 document 폴더
+/document
+
+# token
+.env
