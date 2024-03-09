@@ -1,13 +1,14 @@
-export default function AppCard({ love }) {
-  const { id, name, img, path } = love;
+import { Link } from "react-router-dom"
 
-  // const imgURL = `https://내아이디.github.io/리포지토리명/app-image/${path}.png`;
-  console.log(img);
-  
+export default function AppCard({ love }) {
+  const { name, img, path } = love;
+
   return (
-    <>
-      <div>appcard 에용</div>
-      <img src={`https://2coldok.github.io/react-blog/image/${img}.png`} alt="oh"/> 
-    </>
+    <li>
+      <Link to={`/${path}`}>
+        <img src={`https://2coldok.github.io/react-blog/image/${img}`} alt="oh"/>
+        <h2>{name}</h2>
+      </Link> 
+    </li>
   );
 }

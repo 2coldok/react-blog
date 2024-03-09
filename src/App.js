@@ -18,7 +18,7 @@ function App() {
     queryFn: async () => {
       return await octokit.request("GET /repos/{owner}/{repo}/issues", {
         owner: "2coldok",
-        repo: "blog",
+        repo: "react-blog",
         headers: {
           "X-GitHub-Api-Version": "2022-11-28",
         },
@@ -26,7 +26,6 @@ function App() {
     },
   });
   
-
   return (
     <>
       {!isLoading && <Outlet context={issues.data} />}

@@ -8,7 +8,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import NotFound from "./pages/not-found/NotFound";
 import Home from "./pages/home/Home";
-import Temp from "./pages/Temp";
+import Laboratory from "./pages/apptegory/laboratory/Laboratory";
+import All from "./pages/apptegory/all/All";
+import ReactList from "./pages/apptegory/react/ReactList";
+import PostDetail from "./pages/post-detail/PostDetail";
 
 const queryClient = new QueryClient();
 
@@ -19,7 +22,10 @@ const router = createHashRouter([
     errorElement: <NotFound />,
     children: [
       { index: true, element: <Home /> },
-      { path: "temp", element: <Temp /> },
+      { path: "temp1", element: <All /> },
+      { path: "temp2", element: <ReactList /> },
+      { path: "temp3", element: <Laboratory /> },
+      { path: "postdetail", element: <PostDetail /> },
     ],
   },
 ]);

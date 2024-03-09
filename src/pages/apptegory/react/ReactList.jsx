@@ -1,16 +1,15 @@
 import { useOutletContext } from "react-router-dom";
 import PostList from "../../../components/post-list/PostList";
 
-export default function Laboratory() {
+export default function ReactList() {
   const issues = useOutletContext();
-
-  const laboratoryIssues = issues.filter(
-    (issue) => issue.labels[0].name === "laboratory"
+  const reactIssues = issues.filter(
+    (issue) => issue.labels[0].name === "react"
   );
 
   return (
     <>
-      <PostList issues={laboratoryIssues} />
+      <PostList issues={reactIssues} />
     </>
   );
 }
