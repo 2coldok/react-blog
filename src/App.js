@@ -27,10 +27,10 @@ function App() {
   });
   
   return (
-    <>
+    <div className="container">
       {!isLoading && <Outlet context={issues.data} />}
       {!isLoading && <Navbar issues={issues.data} />}
-    </>
+    </div>
   );
 }
 
