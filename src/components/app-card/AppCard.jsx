@@ -10,7 +10,6 @@ export default function AppCard({ love }) {
         <Link to={`/${path}`}>
           <img src={`https://2coldok.github.io/react-blog/image/${img}`} alt="oh" className={styles.icon}/>
         </Link> 
-        
       </li>
       <h2 className={styles.name}>{name}</h2>
     </div>

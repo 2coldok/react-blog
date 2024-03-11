@@ -63,10 +63,9 @@ export default function Navbar({issues}) {
         <input type="text" placeholder="Search.." value={text} onChange={handleChange} className={styles.input} />
         <button onClick={handleClick} className={styles.search}><BsSearch className={styles.magnify} /></button>
       </form>
-      <NavbarCard data={{ name: 'back', img: "back.png"}}/>
-      <NavbarCard data={{ name: 'home', img: "home.jpeg"}}/>
-      <NavbarCard data={{ name: 'profile', img: "profile.jpeg"}}/>
-      <NavbarCard data={{ name: 'youtube', img: "youtubeMusic.png"}}/>
+      <NavbarCard img={"back.png"}/>
+      <NavbarCard img={"home.png"}/>
+      <NavbarCard img={"home.webp"}/>
       
     </div>
   );
