@@ -65,7 +65,7 @@ export default function Navbar({issues}) {
       </form>
       <NavbarCard img={"back.png"}/>
       <NavbarCard img={"home.png"}/>
-      <NavbarCard img={"home.webp"}/>
+      <NavbarCard img={"poweroff.webp"}/>
       
     </div>
   );
