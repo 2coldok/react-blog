@@ -1,7 +1,9 @@
+import { BsSearch } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SearchList from "../search-list/SearchList";
 import styles from './Navbar.module.css'
+import NavbarCard from "../navbar-card/NavbarCard";
 
 export default function Navbar({issues}) {
   const seacrhData = issues.map((issue) => {
@@ -52,14 +54,20 @@ export default function Navbar({issues}) {
     
   }
   
+  
 
   return (
     <div className={styles.container}>
       {searchScreen && <SearchList list={list} />}
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Search.." value={text} onChange={handleChange} />
-        <button onClick={handleClick}>서치창닫기</button>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <input type="text" placeholder="Search.." value={text} onChange={handleChange} className={styles.input} />
+        <button onClick={handleClick} className={styles.search}><BsSearch className={styles.magnify} /></button>
       </form>
+      <NavbarCard data={{ name: 'back', img: "back.png"}}/>
+      <NavbarCard data={{ name: 'home', img: "home.jpeg"}}/>
+      <NavbarCard data={{ name: 'profile', img: "profile.jpeg"}}/>
+      <NavbarCard data={{ name: 'youtube', img: "youtubeMusic.png"}}/>
+      
     </div>
   );
 }
