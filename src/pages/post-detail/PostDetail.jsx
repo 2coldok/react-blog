@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import CustomMarkdown from "../../components/custom-markdown/CustomMarkdown";
+import styles from './PostDetail.module.css'
 
 export default function PostDetail() {
   const { state } = useLocation();
@@ -9,11 +10,12 @@ export default function PostDetail() {
 
 
   return (
-    <>
-      <p>post detail 페이지에용</p>
-      <h1>{issue.title}</h1>
-      <p>포스트 작성일 : {issue.updated_at}</p>
-      <CustomMarkdown data={issue.body}/>
-    </>
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <h1>{issue.title}</h1>
+        <p>포스트 작성일 : {issue.updated_at}</p>
+      </div>
+      <div className={styles.markdown}><CustomMarkdown data={issue.body}/></div>
+    </div>
   )
 }

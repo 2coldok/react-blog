@@ -8,6 +8,12 @@
   padding: 0;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  color: rgba(187, 187, 187, 0.8);
+}
+
 .ulist {
   padding: 0;
   margin: 0;  

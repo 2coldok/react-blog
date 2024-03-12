@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: center;
 
-  width: 99%;
-  height: 99%;
+  width: 100%;
+  height: 100%;
   /* background-image: url('/public/image/monterey.jpeg'); */
   background-image: url(https://2coldok.github.io/react-blog/image/monterey.jpeg);
   background-repeat: no-repeat;
