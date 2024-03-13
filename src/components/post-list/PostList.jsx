@@ -5,7 +5,7 @@ import { usePortal } from "../../context/SmartPortal";
 export default function PostList({ issues }) {
   const { setPortalState } = usePortal();
   
-  const handleClick = () => setPortalState('tail', 'profile.png', '/postdetail');
+  const handleClick = () => setPortalState('tail', 'document.png', '/postdetail');
   
   return (
     <div className={styles.container}>
