@@ -12,6 +12,8 @@ import Laboratory from "./pages/apptegory/laboratory/Laboratory";
 import All from "./pages/apptegory/all/All";
 import ReactList from "./pages/apptegory/react/ReactList";
 import PostDetail from "./pages/post-detail/PostDetail";
+import SearchList from "./components/search-list/SearchList";
+import Search from "./pages/search/Search";
 
 const queryClient = new QueryClient();
 
@@ -22,10 +24,12 @@ const router = createHashRouter([
     errorElement: <NotFound />,
     children: [
       { index: true, element: <Home /> },
-      { path: "temp1", element: <All /> },
-      { path: "temp2", element: <ReactList /> },
-      { path: "temp3", element: <Laboratory /> },
+      { index: true, element: <SearchList /> },
+      { path: "all", element: <All /> },
+      { path: "react", element: <ReactList /> },
+      { path: "laboratory", element: <Laboratory /> },
       { path: "postdetail", element: <PostDetail /> },
+      { path: "search", element: <Search /> }
     ],
   },
 ]);
