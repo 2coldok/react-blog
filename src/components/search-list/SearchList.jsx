@@ -16,7 +16,7 @@ export default function SearchList({ issues, searchToggle, setSearchToggle }) {
     e.preventDefault();
     setSearchToggle(false);
     
-    setPortalState('middle', 'searchresult', '/search');
+    setPortalState('middle', 'searchresult.png', '/search');
     navigate('/search', { state: { list } });
 
   };
