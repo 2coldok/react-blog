@@ -9,7 +9,7 @@ export default function Search() {
   const issues = [];
   if (state === null) {
     const state = JSON.parse(sessionStorage.getItem('state'));
-    state.list.forEach((element) => {
+    state.searchIssues.forEach((element) => {
       issues.push(element);
     })
     
@@ -18,7 +18,7 @@ export default function Search() {
   if (state !== null) {
     sessionStorage.setItem('state', JSON.stringify(state));
 
-    state.list.forEach((element) => {
+    state.searchIssues.forEach((element) => {
       issues.push(element);
     });
   }

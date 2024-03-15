@@ -35,11 +35,12 @@
   height: 2rem; */
   width: 80%;
   height: 80%;
-  border-radius: 1rem;
+  border-radius: 50%;
 }
 
 .line {
-  width: 2rem;
+  /* width: 2rem; */
+  width: 5%;
   height: 0;
   border: 0.1rem dotted greenyellow;
   margin-left: 0;

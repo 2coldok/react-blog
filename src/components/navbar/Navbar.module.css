@@ -1,8 +1,9 @@
 .container {
-  width: 50%;
+  width: auto;
   height: 10%;
-  margin: 1rem;
-  border-radius: 2rem;
+  margin: 1%;
+  border-radius: 10rem;
+
   
   background-color: rgba(192, 192, 192, 0.2);
 
@@ -11,7 +12,8 @@
   align-items: center;
   justify-content: center;
 
-  padding: 0;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 .form {
@@ -46,21 +48,49 @@
   
 }
 
-.search {
-  width: 15%;
-  height: 70%;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-top: 0.01rem solid rgba(192, 192, 192, 0.5);
-  border-right: 0.01rem solid rgba(192, 192, 192, 0.5);
-  border-bottom: 0.01rem solid rgba(192, 192, 192, 0.5);
-  border-left: none;
+.button {
+  border-radius: 50%;
+  background-color: rgba(192, 192, 192, 0.5);
+
+  width: 5rem;
+  height: 80%;
+
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5%;
+}
+
+.hbutton {
+  border-radius: 50%;
+  background-color: rgba(192, 192, 192, 0.5);
   
-  background-color: rgba(186, 186, 186, 0);
+  width: 5rem;
+  height: 80%;
+  
+  
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5%;
+  
+  border: 4px solid rgb(255, 255, 92);
+}
+
+.search {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+
+  
+
+  
   
 }
 
 .magnify {
-  font-size: x-large;
-  margin-right: 1rem;
+  font-size: 300%;
 }
