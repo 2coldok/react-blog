@@ -63,7 +63,7 @@ export default function SearchList({ issues, searchToggle, setSearchToggle }) {
           
           if (singleLowerTitle.includes(singleLowerText)) {
             const samePart = getAccentBundle(singleLowerText, issue.title);
-            return ({...issue, title: issue.title.replace(samePart, `<span style="color: #ffe74d;">${samePart}</span>`) });
+            return ({...issue, title: issue.title.replace(samePart, `<span style="color: rgb(32, 37, 54);">${samePart}</span>`) });
           }
           return issue;
         })
@@ -85,6 +85,7 @@ export default function SearchList({ issues, searchToggle, setSearchToggle }) {
           value={text}
           onChange={handleChange}
           className={styles.input}
+          autoFocus
         />
         <button className={styles.button}><BsSearch /></button>
       </form>

@@ -18,14 +18,17 @@ export default function PostList({ issues }) {
 
   
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={handleClick}>
       <h1 className={styles.header}>{category.charAt(0).toUpperCase() + category.slice(1)}</h1>
       <ul className={styles.ulist}>
         {issues.map((issue) => (
-          <li key={issue.id} className={styles.list} onClick={handleClick}>
+          <li key={issue.id} className={styles.list}>
             <Link to={"/postdetail"} state={{ data: issue }}>
               <p>{getDateCreated(issue)}</p>
-              <h1>{issue.title}</h1>
+              <div className={styles.middle}>
+                <img src={`https://2coldok.github.io/react-blog/image/${issue.labels[0].name}.png`} alt="oh" className={styles.img} />
+                <h1 className={styles.title}>{issue.title}</h1>
+              </div>
               {/* <h3>내용 : {issue.body}</h3> */}
               {issue.milestone && <Tags issue={issue} category={category} />}
             </Link>
@@ -35,6 +38,8 @@ export default function PostList({ issues }) {
     </div>
   );
 }
+
+{/* <img src={`https://2coldok.github.io/react-blog/image/${img}`} alt="oh" className={styles.icon} /> */}
 
 function getDateCreated(issue) {
   const date = issue.updated_at;

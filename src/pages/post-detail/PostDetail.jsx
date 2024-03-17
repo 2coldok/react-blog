@@ -12,10 +12,18 @@ export default function PostDetail() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>{issue.title}</h1>
-        <p>포스트 작성일 : {issue.updated_at}</p>
+        <h1 className={styles.title}>{issue.title}</h1>
+        <p>{getDateCreated(issue)}</p>
       </div>
       <div className={styles.markdown}><CustomMarkdown data={issue.body}/></div>
     </div>
   )
+}
+
+function getDateCreated(issue) {
+  const date = issue.updated_at;
+  const yearMonthDay = date.substring(0, date.indexOf('T'));
+  const time = date.substring(date.indexOf('T') + 1, date.indexOf('Z'));
+  
+  return `${yearMonthDay} ${time}`;
 }

@@ -9,7 +9,7 @@
 }
 
 .category {
-  background-color: blue;
+  background-color: rgba(192, 192, 192, 0.3);
   border-radius: 15px;
   color: white;
   font-size: 100%;
@@ -17,12 +17,15 @@
   margin: 0.4rem;
   padding: 0.6rem;
 
+  display: flex;
+  justify-content: center;
 }
 
 .tag {
-  background-color: green;
+  background-color: rgba(192, 192, 192, 0.3);
+  width: auto;
   border-radius: 15px;
-  color: white;
+  color: var(--color-blog-light-grey);
   font-size: 100%;
   font-weight: bold;
   margin: 0.4rem;
@@ -30,6 +33,7 @@
 }
 
 .icon {
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
 }

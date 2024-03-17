@@ -14,15 +14,6 @@ export default function Tags({ issue, category }) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.category}>
-        {category === "all" && (
-          <img
-            src={`https://2coldok.github.io/react-blog/image/${img}`}
-            alt="oh"
-            className={styles.icon}
-          />
-        )}
-      </div>
       {tags.map((tag) => (
         <div className={styles.tag}>{tag}</div>
       ))}

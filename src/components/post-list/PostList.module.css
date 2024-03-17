@@ -2,10 +2,25 @@
   overflow: auto;
   /* background-color: var(--color-blog-dark); */
   background-color: rgba(192, 192, 192, 0.3);
-  width: 80%;
+  width: 60%;
   height: 90%;
   border-radius: 0.3rem;
   padding: 0;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+}
+
+.title {
+  margin-left: 1rem;
 }
 
 .header {
@@ -25,4 +40,9 @@
   padding: 1.2rem;
   margin: 1rem;
   color: var(--color-blog-light-gray);
+}
+
+.list:hover {
+  /* transform: scale(1.1); */
+  background-color: rgb(151, 151, 151, 0.3);
 }
