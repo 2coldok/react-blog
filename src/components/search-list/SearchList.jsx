@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./SearchList.module.css";
 import { usePortal } from "../../context/SmartPortal";
-import getAllBlankCase from "../../util/SearchEngine";
+import { BsSearch } from "react-icons/bs";
+
 
 export default function SearchList({ issues, searchToggle, setSearchToggle }) {
   const { setPortalState } = usePortal();
@@ -10,6 +11,8 @@ export default function SearchList({ issues, searchToggle, setSearchToggle }) {
   const navigate = useNavigate();
   const [text, setText] = useState("");
   const [list, setList] = useState([]);
+
+  // console.log(getAllBlankCase(text)); ///////////////////////
 
   const handleChange = (e) => setText(e.target.value);
 
@@ -55,28 +58,14 @@ export default function SearchList({ issues, searchToggle, setSearchToggle }) {
         issues.filter((issue) => {
           return ids.some((id) => id === issue.id);
         }).map((issue) => {
-          const lowTitle = issue.title.toLowerCase().trim();
-          const lowText = text.toLowerCase().trim();
-      
-          if (lowTitle.includes(lowText)) {
-            const startIndex = lowTitle.indexOf(lowText);
-            const length = lowText.length;
-            const samePart = issue.title.substr(startIndex, length);
-
-            return ({...issue, title: issue.title.replace(samePart, `<span style="color: blue">${samePart}</span>`) })////////////////   
-          }
-
-          if (!lowTitle.includes(lowText)) {
-            const sameLowPart = getAllBlankCase(lowText).find((element) => lowTitle.includes(element));
-            const startIndex = lowTitle.indexOf(sameLowPart);
-            const length = sameLowPart.length;
-            const samePart = issue.title.substr(startIndex, length);
-
-            console.log(samePart);
-            return ({...issue, title: issue.title.replace(samePart, `<span style="color: blue">${samePart}</span>`) })////////////////   
-
-          }
+          const singleLowerTitle = issue.title.toLowerCase().split(' ').join('');
+          const singleLowerText = text.toLowerCase().split(' ').join('');
           
+          if (singleLowerTitle.includes(singleLowerText)) {
+            const samePart = getAccentBundle(singleLowerText, issue.title);
+            return ({...issue, title: issue.title.replace(samePart, `<span style="color: #ffe74d;">${samePart}</span>`) });
+          }
+          return issue;
         })
       );
     } else {
@@ -89,14 +78,15 @@ export default function SearchList({ issues, searchToggle, setSearchToggle }) {
   
   return (
     <div className={styles.container} ref={searchScreenRef}>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <input
           type="text"
           placeholder="search.."
           value={text}
           onChange={handleChange}
+          className={styles.input}
         />
-        <button>이동하기</button>
+        <button className={styles.button}><BsSearch /></button>
       </form>
 
       <div className={styles.listsbox}>
@@ -121,11 +111,21 @@ function getIssue(issues, id) {
   return issues.find((issue) => issue.id === id);
 }
 
-// 가나  aq가 나bc
-function replaceToHtml(title, text) {
-  
+function getAccentBundle(text, title) {
+  const array = text.split('').map((element, index) => {
+    if (index !== text.length - 1) {
+      return element + `\\s*`;
+    }
+    return element;
+  });
 
+  const regPrep =  array.join('');
+  const re = new RegExp(regPrep, 'i')
+
+  return title.match(re)[0];
 }
+
+
 
 // 외부 클릭시 자동 닫기 할려했는데 자꾸 토글이랑 충돌해서 제외
 // useEffect(() => {

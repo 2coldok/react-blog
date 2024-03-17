@@ -6,7 +6,7 @@ export default function PostDetail() {
   const { state } = useLocation();
   const issue = state.data;
 
-  console.log(issue.title); 
+  
 
 
   return (

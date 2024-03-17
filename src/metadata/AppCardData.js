@@ -1,22 +1,28 @@
 export const APP_CARD_DATA = [
   {
-    id: 'seoul',
+    id: 'all',
     name: 'All',
     img: 'all.png',
     path: 'all' 
   },
   {
-    id: 'yeouido',
+    id: 'react',
     name: 'React',
     img: 'react.png',
     path: 'react',
   },
   {
-    id: 'tokyo',
+    id: 'laboratory',
     name: 'Laboratory',
     img: 'laboratory.png',
     path: 'laboratory' 
   },
+  {
+    id: 'javascript',
+    name: 'Javascript',
+    img: 'javascript.png',
+    path: 'javascript'
+  }
   
 ];
 
