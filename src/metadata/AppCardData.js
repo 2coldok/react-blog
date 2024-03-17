@@ -15,15 +15,26 @@ export const APP_CARD_DATA = [
     id: 'laboratory',
     name: 'Laboratory',
     img: 'laboratory.png',
-    path: 'laboratory' 
+    path: 'laboratory',
   },
   {
     id: 'javascript',
     name: 'Javascript',
     img: 'javascript.png',
-    path: 'javascript'
+    path: 'javascript',
+  },
+  {
+    id: 'css',
+    name: 'Css',
+    img: 'css.png',
+    path: 'css',
+  },
+  {
+    id: 'profile',
+    name: 'Profile',
+    img: 'profile.png',
+    path: 'profile'
   }
-  
 ];
 
 // const appCardOrder = (names = [...app]) => {

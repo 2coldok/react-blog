@@ -15,6 +15,8 @@ import PostDetail from "./pages/post-detail/PostDetail";
 import SearchList from "./components/search-list/SearchList";
 import Search from "./pages/search/Search";
 import Javascript from "./pages/apptegory/javascript/Javascript";
+import Css from "./pages/apptegory/css/Css";
+import Profile from "./pages/apptegory/profile/Profile";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const router = createHashRouter([
       { path: "react", element: <ReactList /> },
       { path: "laboratory", element: <Laboratory /> },
       { path: "javascript", element: <Javascript /> },
+      { path: "css", element: <Css /> },
+      { path: "profile", element: <Profile /> },
       { path: "postdetail", element: <PostDetail /> },
       { path: "search", element: <Search /> }
     ],
