@@ -11,7 +11,7 @@ export default function AppCard({ love }) {
   const handleClick = () => setPortalState('middle', img, `/${path}`)
 
   return (
-    <div>
+    <div className={styles.container}>
       <li className={styles.appbox} onClick={handleClick}>
         <Link to={`/${path}`}>
           <img src={`https://2coldok.github.io/react-blog/image/${img}`} alt="oh" className={styles.icon}/>
