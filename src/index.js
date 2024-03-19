@@ -17,6 +17,9 @@ import Search from "./pages/search/Search";
 import Javascript from "./pages/apptegory/javascript/Javascript";
 import Css from "./pages/apptegory/css/Css";
 import Profile from "./pages/apptegory/profile/Profile";
+import Next from "./pages/apptegory/next/Next";
+import Typescript from "./pages/apptegory/typescript/Typescript";
+import Youtube from "./pages/apptegory/youtube/Youtube";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +37,9 @@ const router = createHashRouter([
       { path: "javascript", element: <Javascript /> },
       { path: "css", element: <Css /> },
       { path: "profile", element: <Profile /> },
+      { path: "next", element: <Next /> },
+      { path: "typescript", element: <Typescript /> },
+      { path: "youtube", element: <Youtube /> },
       { path: "postdetail", element: <PostDetail /> },
       { path: "search", element: <Search /> }
     ],

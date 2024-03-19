@@ -10,6 +10,7 @@ export default function Navbar({ issues }) {
   const [searchToggle, setSearchToggle] = useState(false);
 
   const handleClick = () => setSearchToggle((prev) => !prev);
+  const handlePower = () => window.close();
 
   return (
     <div className={styles.container}>
@@ -30,6 +31,10 @@ export default function Navbar({ issues }) {
         <NavbarCard position={"middle"} />
       )}
       {getPortalState("tail") !== "hide" && <NavbarCard position={"tail"} />}
+      {/* <button className={styles.powercontainer} onClick={handlePower}>
+        <img src={`https://2coldok.github.io/react-blog/image/poweroff.png`} alt="oh" className={styles.power} />
+      </button> */}
     </div>
+
   );
 }

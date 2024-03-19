@@ -63,7 +63,7 @@ export default function SearchList({ issues, searchToggle, setSearchToggle }) {
           
           if (singleLowerTitle.includes(singleLowerText)) {
             const samePart = getAccentBundle(singleLowerText, issue.title);
-            return ({...issue, title: issue.title.replace(samePart, `<span style="color: rgb(32, 37, 54);">${samePart}</span>`) });
+            return ({...issue, title: issue.title.replace(samePart, `<span style="color: rgb(80, 255, 82);">${samePart}</span>`) });
           }
           return issue;
         })

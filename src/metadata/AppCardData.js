@@ -19,7 +19,7 @@ export const APP_CARD_DATA = [
   },
   {
     id: 'javascript',
-    name: 'Javascript',
+    name: 'JavaScript',
     img: 'javascript.png',
     path: 'javascript',
   },
@@ -34,6 +34,30 @@ export const APP_CARD_DATA = [
     name: 'Profile',
     img: 'profile.png',
     path: 'profile'
+  },
+  {
+    id: 'github',
+    name: 'GitHub',
+    img: 'github.png',
+    path: 'github',
+  },
+  {
+    id: 'typescript',
+    name: 'TypeScript',
+    img: 'typescript.png',
+    path: 'typescript',
+  },
+  {
+    id: 'next',
+    name: 'Next',
+    img: 'next.png',
+    path: 'next',
+  },
+  {
+    id: 'youtube',
+    name: 'YouTube',
+    img: 'youtube.png',
+    path: 'youtube',
   }
 ];
 
