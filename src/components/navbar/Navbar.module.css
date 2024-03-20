@@ -105,6 +105,10 @@
   background-color: rgba(192, 192, 192, 0.1);
 }
 
+.search:hover {
+  cursor: pointer;
+}
+
 .magnify {
   font-size: 300%;
 }

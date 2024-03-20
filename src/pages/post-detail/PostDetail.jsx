@@ -5,6 +5,7 @@ import styles from './PostDetail.module.css'
 export default function PostDetail() {
   const { state } = useLocation();
   const issue = state.data;
+  
 
   
 

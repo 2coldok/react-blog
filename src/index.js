@@ -20,6 +20,7 @@ import Profile from "./pages/apptegory/profile/Profile";
 import Next from "./pages/apptegory/next/Next";
 import Typescript from "./pages/apptegory/typescript/Typescript";
 import Youtube from "./pages/apptegory/youtube/Youtube";
+import YoutubeDetail from "./pages/youtube-detail/YoutubeDetail";
 
 const queryClient = new QueryClient();
 
@@ -41,7 +42,8 @@ const router = createHashRouter([
       { path: "typescript", element: <Typescript /> },
       { path: "youtube", element: <Youtube /> },
       { path: "postdetail", element: <PostDetail /> },
-      { path: "search", element: <Search /> }
+      { path: "search", element: <Search /> },
+      { path: "youtubedetail", element: <YoutubeDetail /> }
     ],
   },
 ]);

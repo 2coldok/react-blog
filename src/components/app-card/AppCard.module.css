@@ -22,9 +22,10 @@
 
 .appbox:hover {
   /* transform: scale(1.1); */
-  transform: rotate(10deg) scale(1.2);
+  transform: rotate(7deg) scale(1.2);
   color: var(--color-accent);
   filter: brightness(125%);
+  cursor: pointer;
 }
 
 .icon {
