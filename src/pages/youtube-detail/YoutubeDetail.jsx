@@ -1,9 +1,11 @@
-import { usePortal } from "../../context/SmartPortal";
+import { useLocation } from 'react-router-dom';
 import styles from "./YoutubeDetail.module.css";
 
 export default function YoutubeDetail() {
-  const { setPortalState } = usePortal();
-  setPortalState('tail', 'movie.png', '/youtubedetail');
+  const { state } = useLocation();
+  const youtubeURL = state.url;
+  console.log(youtubeURL);
+  const youtubeEmbedURL = `http://www.youtube.com/embed/${getEmbedURL(youtubeURL)}`;
 
   return (
     <div className={styles.container}>
@@ -13,7 +15,7 @@ export default function YoutubeDetail() {
         type="text/html"
         width="100%"
         height="100%"
-        src={"http://www.youtube.com/embed/UUvBhqma9fI"}
+        src={youtubeEmbedURL}
         // style={{ border: "none" }}
         className={styles.youtube}
       ></iframe>
@@ -21,14 +23,17 @@ export default function YoutubeDetail() {
   );
 }
 
-{
-  /* <iframe
-        id="player"
-        title="youtube player"
-        type="text/html"
-        width="30%"
-        height="30%"
-        src={'http://www.youtube.com/embed/UUvBhqma9fI'}
-        style={{border : 'none' }}
-      ></iframe> */
-}
+function getEmbedURL(youtubeURL) {
+  if (youtubeURL.includes('?si=')) {
+    const videoId = youtubeURL.slice(0, youtubeURL.indexOf('?si=')).split('/').at(-1);
+    return videoId;
+  }
+
+  if (youtubeURL.includes('&list=')) {
+    const videoId = youtubeURL.slice(0, youtubeURL.indexOf('&list=')).split('watch?v=').at(-1);
+    return videoId;
+  }
+
+  const videoId = youtubeURL.split('watch?v=').at(-1);
+  return videoId;
+};

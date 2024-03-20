@@ -73,3 +73,23 @@ function getAccentBundle(text, title) {
 //   input: 'i am our les baguettes pa ris',
 //   groups: undefined
 // ]
+
+
+
+// function getEmbedURL(youtubeURL) {
+//   if (youtubeURL.includes('?si=')) {
+//     const videoId = youtubeURL.slice(0, youtubeURL.indexOf('?si=')).split('/').at(-1);
+//     return videoId;
+//   }
+
+//   if (youtubeURL.includes('&list=')) {
+//     const videoId = youtubeURL.slice(0, youtubeURL.indexOf('&list=')).split('watch?v=').at(-1);
+//     return videoId;
+//   }
+
+//   const videoId = youtubeURL.split('watch?v=').at(-1);
+//   return videoId;
+// };
+
+// const q = getEmbedURL('https://www.youtube.com/watch?v=So9BeU_Vy20&list=RDSo9BeU_Vy20&start_radio=1');
+// console.log(q);
