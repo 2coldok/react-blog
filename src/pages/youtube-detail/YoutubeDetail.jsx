@@ -5,7 +5,7 @@ export default function YoutubeDetail() {
   const { state } = useLocation();
   const youtubeURL = state.url;
   console.log(youtubeURL);
-  const youtubeEmbedURL = `http://www.youtube.com/embed/${getEmbedURL(youtubeURL)}`;
+  const youtubeEmbedURL = `https://www.youtube.com/embed/${getEmbedURL(youtubeURL)}`;
 
   return (
     <div className={styles.container}>
