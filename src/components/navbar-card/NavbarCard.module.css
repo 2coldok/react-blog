@@ -5,8 +5,6 @@
   width: 5rem;
   height: 90%;
 
-
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,11 +13,9 @@
 
 .container:hover {
   cursor: pointer;
-  /* transform: scale(1.1); */
   transform: scale(1.2);
   color: var(--color-accent);
   filter: brightness(125%);
-  
 }
 
 .hcontainer {
@@ -28,8 +24,6 @@
 
   width: 5rem;
   height: 90%;
-
-
 
   display: flex;
   align-items: center;
@@ -41,22 +35,18 @@
 
 .hcontainer:hover {
   cursor: pointer;
-  /* transform: scale(1.1); */
   transform: scale(1.2);
   color: var(--color-accent);
   filter: brightness(125%);
 }
 
 .icon {
-  /* width: 2rem;
-  height: 2rem; */
   width: 80%;
   height: 80%;
   border-radius: 50%;
 }
 
 .line {
-  /* width: 2rem; */
   width: 7%;
   height: 0;
   border: 0.1rem dotted rgb(80, 255, 82);

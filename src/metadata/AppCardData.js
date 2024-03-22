@@ -1,5 +1,3 @@
-
-
 export const APP_CARD_DATA = [
   {
     id: 'all',
@@ -79,4 +77,3 @@ export const APP_CARD_DATA = [
   
   
 // }
-

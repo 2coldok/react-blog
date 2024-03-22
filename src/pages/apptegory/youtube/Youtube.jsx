@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { YOUTUBE_DATA } from "../../../metadata/YouTubeData";
-import styles from "./Youtube.module.css";
-import { usePortal } from "../../../context/SmartPortal";
 import { useState } from "react";
 import { FaYoutube } from "react-icons/fa";
+import { YOUTUBE_DATA } from "../../../metadata/YouTubeData";
+import { usePortal } from "../../../context/SmartPortal";
+import styles from "./Youtube.module.css";
 
 export default function Youtube() {
   const navigate = useNavigate();

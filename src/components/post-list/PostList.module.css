@@ -1,6 +1,5 @@
 .container {
   overflow: auto;
-  /* background-color: var(--color-blog-dark); */
   background-color: rgba(192, 192, 192, 0.3);
   width: 70%;
   height: 90%;
@@ -44,6 +43,5 @@
 }
 
 .list:hover {
-  /* transform: scale(1.1); */
   background-color: rgb(151, 151, 151, 0.3);
 }

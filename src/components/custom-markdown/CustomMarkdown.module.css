@@ -1,0 +1,32 @@
+.container {
+  background-color: var(--color-blog-semi-dark);
+  /* background-color: #22272E; */
+  color: var(--color-blog-light-gray);
+  /* letter-spacing: 0.1rem; */
+  /* word-spacing: 1px; */
+  line-height: 2.1;
+}
+
+hr {
+  border: 1px solid var(--color-blog-dark-gray);
+}
+
+table {
+  border-spacing: 0 !important;
+  border-collapse: collapse !important;
+  border-color: inherit !important;
+  display: block !important;
+  width: max-content !important;
+  max-width: 100% !important;
+  overflow: auto !important;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  /* border-color: inherit !important; */
+  border-color: #444C56;
+  border-style: solid !important;
+  border-width: 1.5px !important;
+  padding-inline: 0.6rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}

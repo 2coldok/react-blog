@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import { SmartPortalProvider } from "./context/SmartPortal";
+import Introduce from "./components/introduce/Introduce";
 
 const octokit = new Octokit({
   auth: process.env.REACT_APP_CAT.replaceAll("?", ""),
@@ -25,11 +26,14 @@ function App() {
         },
       });
     },
+    staleTime: 1000 * 60 * 10,
   });
   
   return (
     <div className="container">
       <SmartPortalProvider>
+        {error && <p>API ERROR!</p>}
+        {isLoading && <Introduce />}
         {!isLoading && <Outlet context={issues.data} />}
         {!isLoading && <Navbar issues={issues.data} />}
       </SmartPortalProvider>

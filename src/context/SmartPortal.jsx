@@ -3,7 +3,6 @@ import { createContext, useContext, useState } from "react"
 const SmartPortalContext = createContext();
 
 export function SmartPortalProvider({ children }) {
-  console.log('smartPortal jsx 실행됨'); /////////////////
   const [portalData, setPortalData] = useState({head: ['home.png', '/'], middle:['', ''], tail: ['', '']});
   const [smartPortal, setSmartPortal] = useState(['highlight', 'hide', 'hide']);
   
