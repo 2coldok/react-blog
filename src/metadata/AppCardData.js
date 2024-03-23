@@ -94,6 +94,14 @@ export const APP_CARD_DATA = [
     path: 'pandora',
     type: 'playground',
     page: '3',
+  },
+  {
+    id: 'jest',
+    name: 'Jest',
+    img: 'jest.png',
+    path: 'jest',
+    type: 'jset',
+    page: '2',
   }
 ];
 

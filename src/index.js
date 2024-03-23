@@ -23,8 +23,7 @@ import Youtube from "./pages/apptegory/youtube/Youtube";
 import YoutubeDetail from "./pages/youtube-detail/YoutubeDetail";
 import Pandora from "./pages/apptegory/pandora/Pandora";
 import Three from "./pages/apptegory/three/Three";
-
-
+import Jest from "./pages/apptegory/jest/Jest";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +46,7 @@ const router = createHashRouter([
       { path: "youtube", element: <Youtube /> },
       { path: "three", element: <Three /> },
       { path: "pandora", element: <Pandora /> },
+      { path: "jest", element: <Jest /> },
       { path: "postdetail", element: <PostDetail /> },
       { path: "search", element: <Search /> },
       { path: "youtubedetail", element: <YoutubeDetail /> }
