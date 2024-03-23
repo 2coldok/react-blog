@@ -1,6 +1,6 @@
 .container {
   border-radius: 50%;
-  background-color: rgba(192, 192, 192, 0.5);
+  background-color: rgba(192, 192, 192, 0.1);
 
   width: 5rem;
   height: 90%;
@@ -14,13 +14,14 @@
 .container:hover {
   cursor: pointer;
   transform: scale(1.2);
+  transition: all .2s;
   color: var(--color-accent);
   filter: brightness(125%);
 }
 
 .hcontainer {
   border-radius: 50%;
-  background-color: rgba(192, 192, 192, 0.5);
+  background-color: rgba(192, 192, 192, 0.1);
 
   width: 5rem;
   height: 90%;
@@ -36,6 +37,7 @@
 .hcontainer:hover {
   cursor: pointer;
   transform: scale(1.2);
+  transition: all .2s;
   color: var(--color-accent);
   filter: brightness(125%);
 }

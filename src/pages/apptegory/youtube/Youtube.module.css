@@ -94,7 +94,7 @@
 .list:hover {
   background-color: rgba(0, 83, 156, 0.9);
   color: #ffd662;
-  cursor: progress;
+  cursor: pointer;
 }
 
 .title {

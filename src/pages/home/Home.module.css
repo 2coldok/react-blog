@@ -64,6 +64,7 @@
 
 .buttonleft:hover {
   transform: scale(1.8) translate(-0.5rem);
+  transition: all .2s;
   color: var(--color-accent);
   filter: brightness(125%);
   cursor: pointer;
@@ -83,6 +84,7 @@
 
 .buttonright:hover {
   transform: scale(1.8) translate(0.5rem);
+  transition: all .2s;
   color: var(--color-accent);
   filter: brightness(125%);
   cursor: pointer;

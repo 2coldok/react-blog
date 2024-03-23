@@ -4,7 +4,8 @@ export const APP_CARD_DATA = [
     name: 'All',
     img: 'all.png',
     path: 'all',
-    type: 'post', 
+    type: 'post',
+    page: '1',
   },
   {
     id: 'react',
@@ -12,6 +13,7 @@ export const APP_CARD_DATA = [
     img: 'react.png',
     path: 'react',
     type: 'post',
+    page: '1',
   },
   {
     id: 'laboratory',
@@ -19,6 +21,7 @@ export const APP_CARD_DATA = [
     img: 'laboratory.png',
     path: 'laboratory',
     type: 'post',
+    page: '2',
   },
   {
     id: 'javascript',
@@ -26,6 +29,7 @@ export const APP_CARD_DATA = [
     img: 'javascript.png',
     path: 'javascript',
     type: 'post',
+    page: '1',
   },
   {
     id: 'css',
@@ -33,6 +37,15 @@ export const APP_CARD_DATA = [
     img: 'css.png',
     path: 'css',
     type: 'post',
+    page: '1',
+  },
+  {
+    id: 'three',
+    name: 'Three',
+    img: 'three.png',
+    path: 'three',
+    type: 'post',
+    page: '1',
   },
   {
     id: 'profile',
@@ -40,6 +53,7 @@ export const APP_CARD_DATA = [
     img: 'profile.png',
     path: 'profile',
     type: 'playground',
+    page: '1',
   },
   {
     id: 'github',
@@ -47,6 +61,7 @@ export const APP_CARD_DATA = [
     img: 'github.png',
     path: 'https://github.com/2coldok',
     type: 'link',
+    page: '1',
   },
   {
     id: 'typescript',
@@ -54,6 +69,7 @@ export const APP_CARD_DATA = [
     img: 'typescript.png',
     path: 'typescript',
     type: 'post',
+    page: '1',
   },
   {
     id: 'next',
@@ -61,6 +77,7 @@ export const APP_CARD_DATA = [
     img: 'next.png',
     path: 'next',
     type: 'post',
+    page: '1',
   },
   {
     id: 'youtube',
@@ -68,6 +85,15 @@ export const APP_CARD_DATA = [
     img: 'youtube.png',
     path: 'youtube',
     type: 'playground',
+    page: '1',
+  },
+  {
+    id: 'pandora',
+    name: '?',
+    img: 'pandora.png',
+    path: 'pandora',
+    type: 'playground',
+    page: '3',
   }
 ];
 

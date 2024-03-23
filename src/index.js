@@ -21,6 +21,10 @@ import Next from "./pages/apptegory/next/Next";
 import Typescript from "./pages/apptegory/typescript/Typescript";
 import Youtube from "./pages/apptegory/youtube/Youtube";
 import YoutubeDetail from "./pages/youtube-detail/YoutubeDetail";
+import Pandora from "./pages/apptegory/pandora/Pandora";
+import Three from "./pages/apptegory/three/Three";
+
+
 
 const queryClient = new QueryClient();
 
@@ -41,6 +45,8 @@ const router = createHashRouter([
       { path: "next", element: <Next /> },
       { path: "typescript", element: <Typescript /> },
       { path: "youtube", element: <Youtube /> },
+      { path: "three", element: <Three /> },
+      { path: "pandora", element: <Pandora /> },
       { path: "postdetail", element: <PostDetail /> },
       { path: "search", element: <Search /> },
       { path: "youtubedetail", element: <YoutubeDetail /> }

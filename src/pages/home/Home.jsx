@@ -36,15 +36,19 @@ export default function Home() {
       <div className={styles.middlecontainer}>
         <div className={styles.slidecontainer} ref={slideRef}>
           <div className={styles.appcontainer}>
-            {APP_CARD_DATA.map((app) => (
+            {APP_CARD_DATA.filter((app) => app.page === '1').map((app) => (
               <AppCard key={app.id} app={app} />
             ))}
           </div>
           <div className={styles.appcontainer}>
-            <AppCard key={APP_CARD_DATA[0].id} app={APP_CARD_DATA[0]} />
+            {APP_CARD_DATA.filter((app) => app.page === '2').map((app) => (
+              <AppCard key={app.id} app={app} />
+            ))}
           </div>
           <div className={styles.appcontainer}>
-            <AppCard key={APP_CARD_DATA[1].id} app={APP_CARD_DATA[1]} />
+            {APP_CARD_DATA.filter((app) => app.page === '3').map((app) => (
+              <AppCard key={app.id} app={app} />
+            ))}
           </div>
         </div>
       </div>
