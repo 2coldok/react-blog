@@ -36,7 +36,8 @@
 }
 
 .input::placeholder {
-  color: var(--color-blog-light-gray);
+  /* color: var(--color-blog-light-gray); */
+  color: #cfcfcf;
   font-weight: bolder;
   font-size: larger;
 }
@@ -58,13 +59,15 @@
 }
 
 .icon {
-  width: 3rem;
+  width: 90%;
+  height: 90%;
+  margin: 0;
   font-size: x-large;
-  color: red;
 }
 
 .icon:hover {
   scale: 1.4;
+  color: rgba(0, 83, 156, 0.9);
   filter: brightness(125%);
 }
 

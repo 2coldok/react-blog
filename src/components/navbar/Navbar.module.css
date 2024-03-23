@@ -43,7 +43,7 @@
 
 .button {
   border-radius: 50%;
-  background-color: rgba(192, 192, 192, 0.3);
+  background-color: rgba(192, 192, 192, 0.5);
   
   width: 5rem;
   height: 90%;
@@ -72,7 +72,7 @@
   justify-content: center;
   margin-right: 5%;
   
-  border: 6px solid rgb(80, 255, 82);
+  border: 0.43rem solid rgb(80, 255, 82);
 }
 
 .hbutton:hover {
@@ -86,7 +86,9 @@
   height: 80%;
   border-radius: 50%;
   border-style: none;
-  background-color: rgba(192, 192, 192, 0.1);
+  margin: 0;
+  padding: 0;
+  background-color: rgba(192, 192, 192, 0);
 }
 
 .search:hover {

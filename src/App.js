@@ -10,7 +10,7 @@ const octokit = new Octokit({
   auth: process.env.REACT_APP_CAT.replaceAll("?", ""),
 });
 
-function App() {
+export default function App() {
   const {
     isLoading,
     error,
@@ -41,4 +41,4 @@ function App() {
   );
 }
 
-export default App;
+// export default App;

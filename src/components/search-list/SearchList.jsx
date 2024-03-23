@@ -86,6 +86,8 @@ export default function SearchList({ issues, setSearchToggle }) {
     } else {
       setList([]);
     }
+
+    return () => console.log('clean up');
   }, [text]);
 
   const listIds = list.map((item) => item.id);

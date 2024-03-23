@@ -16,15 +16,15 @@ export default function AppCard({ app }) {
   };
 
   return (
-    <ul className={styles.container}>
-      <li key={id} className={styles.appbox} onClick={handleClick}>
+    <div className={styles.container}>
+      <div className={styles.appbox} onClick={handleClick}>
         <img
           src={`https://2coldok.github.io/react-blog/image/${img}`}
           alt="oh"
           className={styles.icon}
         />
-      </li>
+      </div>
       <h2 className={styles.name}>{name}</h2>
-    </ul>
+    </div>
   );
 }

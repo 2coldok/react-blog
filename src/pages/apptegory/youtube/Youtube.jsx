@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { FaYoutube } from "react-icons/fa";
+import { TbPlayerPlayFilled } from "react-icons/tb";
 import { YOUTUBE_DATA } from "../../../metadata/YouTubeData";
 import { usePortal } from "../../../context/SmartPortal";
 import styles from "./Youtube.module.css";
@@ -15,6 +15,7 @@ export default function Youtube() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!urlValdiate(text)) {
+      setText('');
       return alert('유효하지 않은 주소입니다.');
     }
     setPortalState("tail", "movie.png", "/youtubedetail");
@@ -26,13 +27,13 @@ export default function Youtube() {
       <form onSubmit={handleSubmit} className={styles.form}>
         <input
           type="text"
-          placeholder="Paste the YouTube video link"
+          placeholder="Any YouTube Video Link"
           value={text}
           onChange={handleChange}
           autoFocus
           className={styles.input}
         />
-        <button className={styles.button}><FaYoutube className={styles.icon} /></button>
+        <button className={styles.button}><TbPlayerPlayFilled className={styles.icon} /></button>
       </form>
 
       <ul className={styles.ul}>
