@@ -88,11 +88,11 @@ export const APP_CARD_DATA = [
     page: '1',
   },
   {
-    id: 'pandora',
+    id: 'blackbox',
     name: '?',
-    img: 'pandora.png',
-    path: 'pandora',
-    type: 'playground',
+    img: 'blackbox.png',
+    path: 'blackbox',
+    type: 'privacy',
     page: '3',
   },
   {

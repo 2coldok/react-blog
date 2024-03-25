@@ -30,3 +30,10 @@ yarn-error.log*
 
 # my javascript playground
 asdf.js
+
+# formatter
+Ella.js
+
+# black box
+BlackBox.jsx
+BlackBox.module.css

@@ -21,9 +21,9 @@ import Next from "./pages/apptegory/next/Next";
 import Typescript from "./pages/apptegory/typescript/Typescript";
 import Youtube from "./pages/apptegory/youtube/Youtube";
 import YoutubeDetail from "./pages/youtube-detail/YoutubeDetail";
-import Pandora from "./pages/apptegory/pandora/Pandora";
 import Three from "./pages/apptegory/three/Three";
 import Jest from "./pages/apptegory/jest/Jest";
+import BlackBox from "./pages/apptegory/blackbox/BlackBox";
 
 const queryClient = new QueryClient();
 
@@ -45,7 +45,7 @@ const router = createHashRouter([
       { path: "typescript", element: <Typescript /> },
       { path: "youtube", element: <Youtube /> },
       { path: "three", element: <Three /> },
-      { path: "pandora", element: <Pandora /> },
+      { path: "blackbox", element: <BlackBox /> },
       { path: "jest", element: <Jest /> },
       { path: "postdetail", element: <PostDetail /> },
       { path: "search", element: <Search /> },
