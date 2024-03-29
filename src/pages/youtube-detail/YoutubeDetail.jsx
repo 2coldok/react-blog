@@ -4,7 +4,7 @@ import styles from "./YoutubeDetail.module.css";
 export default function YoutubeDetail() {
   const { state } = useLocation();
   const youtubeURL = state.url;
-  const youtubeEmbedURL = `https://www.youtube.com/embed/${getEmbedURL(youtubeURL)}`;
+  const youtubeEmbedURL = `https://www.youtube.com/embed/${getVideoId(youtubeURL)}`;
 
   return (
     <div className={styles.container}>
@@ -22,17 +22,24 @@ export default function YoutubeDetail() {
   );
 }
 
-function getEmbedURL(youtubeURL) {
+function getVideoId(youtubeURL) {
   if (youtubeURL.includes('?si=')) {
-    const videoId = youtubeURL.slice(0, youtubeURL.indexOf('?si=')).split('/').at(-1);
+    const array = youtubeURL.slice(0, youtubeURL.indexOf('?si=')).split('/');
+    const videoId = array[array.length - 1];
     return videoId;
   }
 
   if (youtubeURL.includes('&list=')) {
-    const videoId = youtubeURL.slice(0, youtubeURL.indexOf('&list=')).split('watch?v=').at(-1);
-    return videoId;
+    const array = youtubeURL.slice(0, youtubeURL.indexOf('&list=')).split('watch?v=');
+    const videoId = array[array.length - 1];
+    return videoId
   }
 
-  const videoId = youtubeURL.split('watch?v=').at(-1);
+  const array = youtubeURL.split('watch?v=');
+  const videoId = array[array.length - 1];
+  
+  if (videoId?.includes('&')) {
+    return videoId.split('&')[0];
+  }
   return videoId;
-};
+}
