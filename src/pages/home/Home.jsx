@@ -2,7 +2,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import AppCard from "../../components/app-card/AppCard";
 import { APP_CARD_DATA } from "../../metadata/AppCardData";
 import styles from "./Home.module.css";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 export default function Home() {
   const slideRef = useRef();

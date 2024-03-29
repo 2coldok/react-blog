@@ -4,7 +4,7 @@ import styles from "./AppCard.module.css";
 import { decryption } from "../../util/Ella";
 
 export default function AppCard({ app }) {
-  const { id, name, img, path, type } = app;
+  const { name, img, path, type } = app;
   const navigate = useNavigate();
   const { setPortalState } = usePortal();
 

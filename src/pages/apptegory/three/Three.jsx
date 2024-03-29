@@ -1,6 +1,6 @@
 import { useOutletContext } from "react-router-dom";
 import PostList from "../../../components/post-list/PostList";
-import styles from './Three.module.css'
+// import styles from './Three.module.css'
 
 export default function Three() {
   const issues = useOutletContext();
