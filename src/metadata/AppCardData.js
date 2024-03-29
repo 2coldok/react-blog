@@ -52,7 +52,7 @@ export const APP_CARD_DATA = [
     name: 'Profile',
     img: 'profile.png',
     path: 'profile',
-    type: 'playground',
+    type: 'comingsoon',
     page: '1',
   },
   {
@@ -88,6 +88,14 @@ export const APP_CARD_DATA = [
     page: '1',
   },
   {
+    id: 'radio',
+    name: 'Radio Note',
+    img: 'radio.png',
+    path: 'https://2coldok.github.io/typescript-music-note',
+    type: 'link',
+    page: '1',
+  },
+  {
     id: 'blackbox',
     name: '?',
     img: 'blackbox.png',
@@ -100,7 +108,7 @@ export const APP_CARD_DATA = [
     name: 'Jest',
     img: 'jest.png',
     path: 'jest',
-    type: 'jset',
+    type: 'post',
     page: '2',
   }
 ];

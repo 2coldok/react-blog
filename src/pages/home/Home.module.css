@@ -27,7 +27,7 @@
   width: 300%;
   height: 100%;
   transform: translate(-0vw);
-  transition: all .5s;
+  transition: all .5s; /*.5s*/
   /* background-color: yellowgreen; */
 }
 

@@ -4,7 +4,6 @@ import styles from "./YoutubeDetail.module.css";
 export default function YoutubeDetail() {
   const { state } = useLocation();
   const youtubeURL = state.url;
-  console.log(youtubeURL);
   const youtubeEmbedURL = `https://www.youtube.com/embed/${getEmbedURL(youtubeURL)}`;
 
   return (

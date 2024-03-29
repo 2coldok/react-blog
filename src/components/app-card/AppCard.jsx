@@ -9,6 +9,9 @@ export default function AppCard({ app }) {
   const { setPortalState } = usePortal();
 
   const handleClick = () => {
+    if (type === 'comingsoon') {
+      return alert('준비중입니다.');
+    }
     if (type === "link") {
       return window.open(`${path}`);
     }
@@ -25,7 +28,7 @@ export default function AppCard({ app }) {
         return;
       } 
     }
-    if (type !== 'link' && type !== 'privacy') {
+    if (type !== 'link' && type !== 'privacy' !== 'comingsoon') {
       setPortalState("middle", img, `/${path}`);
       navigate(`/${path}`);
       return;

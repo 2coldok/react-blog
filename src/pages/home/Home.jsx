@@ -53,7 +53,6 @@ export default function Home() {
         </div>
       </div>
 
-
       {page !== 3 && <button className={styles.buttonright} onClick={handleRightClick}><FaChevronRight className={styles.icon} /></button>}
     </div>
   )

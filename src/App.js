@@ -1,10 +1,10 @@
-import "./App.css";
 import { Octokit } from "octokit";
 import { useQuery } from "@tanstack/react-query";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import { SmartPortalProvider } from "./context/SmartPortal";
 import Introduce from "./components/introduce/Introduce";
+import "./App.css";
 
 const octokit = new Octokit({
   auth: process.env.REACT_APP_CAT.replaceAll("?", ""),
