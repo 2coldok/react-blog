@@ -3,11 +3,19 @@ import { useQuery } from "@tanstack/react-query";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import { SmartPortalProvider } from "./context/SmartPortal";
+import { BlurProvider } from "./context/Blur";
+import React from "react";
 import "./App.css";
 
 const octokit = new Octokit({
   auth: process.env.REACT_APP_CAT.replaceAll("?", ""),
 });
+
+const AppProvider = ({ contexts, children }) =>
+  contexts.reduce(
+    (prev, context) => React.createElement(context, { children: prev }),
+    children
+  );
 
 export default function App() {
   const {
@@ -30,11 +38,11 @@ export default function App() {
 
   return (
     <div className="container">
-      <SmartPortalProvider>
+      <AppProvider contexts={[SmartPortalProvider, BlurProvider]}>
         {error && <p>API ERROR!</p>}
         {!isLoading && <Outlet context={issues.data} />}
         {!isLoading && <Navbar issues={issues.data} />}
-      </SmartPortalProvider>
+      </AppProvider>
     </div>
   );
 }

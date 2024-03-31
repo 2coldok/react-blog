@@ -3,8 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { usePortal } from "../../context/SmartPortal";
 import { BsSearch } from "react-icons/bs";
 import styles from "./SearchList.module.css";
+import { useBlur } from "../../context/Blur";
 
 export default function SearchList({ issues, setSearchToggle }) {
+  const { setBlur } = useBlur();
   const { setPortalState } = usePortal();
   const searchScreenRef = useRef();
   const navigate = useNavigate();
@@ -18,12 +20,14 @@ export default function SearchList({ issues, setSearchToggle }) {
     if (list.length === 0) {
       return;
     }
+    setBlur((prev) => !prev);
     setSearchToggle(false);
     setPortalState("middle", "searchresult.png", "/search");
     navigate("/search", { state: { searchIssues } });
   };
 
   const handleClick = (e) => {
+    setBlur((prev) => !prev);
     setSearchToggle(false);
 
     const name = e.target.id;
@@ -98,7 +102,6 @@ export default function SearchList({ issues, setSearchToggle }) {
       <form onSubmit={handleSubmit} className={styles.form}>
         <input
           type="text"
-          placeholder="search.."
           value={text}
           onChange={handleChange}
           className={styles.input}
@@ -109,24 +112,26 @@ export default function SearchList({ issues, setSearchToggle }) {
         </button>
       </form>
 
-      <div className={styles.listsbox}>
+      <ul className={styles.listsbox}>
         {list.map((item) => (
-          <Link to={`/postdetail`} state={{ data: getIssue(issues, item.id) }}>
-            <div
-              className={styles.list}
-              onClick={handleClick}
-              id={item.labels[0].name}
-            >
-              {/* 제목 : {item.title} 태그 : {item.milestone.title} */}
-              <span
-                dangerouslySetInnerHTML={{ __html: item.title }}
-                onClick={handleClick}
+          <li onClick={handleClick} key={item.id} className={styles.listsbox2}>
+            <Link to={`/postdetail`} state={{ data: getIssue(issues, item.id) }}>
+              <div
+                className={styles.list}
+                // onClick={handleClick}
                 id={item.labels[0].name}
-              ></span>
-            </div>
-          </Link>
+              >
+                {/* 제목 : {item.title} 태그 : {item.milestone.title} */}
+                <span
+                  dangerouslySetInnerHTML={{ __html: item.title }}
+                  // onClick={handleClick}
+                  id={item.labels[0].name}
+                ></span>
+              </div>
+            </Link>
+          </li>  
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

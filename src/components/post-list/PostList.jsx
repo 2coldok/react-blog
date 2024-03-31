@@ -3,8 +3,10 @@ import { usePortal } from "../../context/SmartPortal";
 import { useLocation } from "react-router-dom";
 import Tags from "./Tags";
 import styles from "./PostList.module.css";
+import { useBlur } from "../../context/Blur";
 
 export default function PostList({ issues }) {
+  const { blur } = useBlur();
   const { setPortalState } = usePortal();
   const location = useLocation();
   const category = location.pathname.substr(1); // all
@@ -12,7 +14,7 @@ export default function PostList({ issues }) {
   const handleClick = () => setPortalState("tail", "document.png", "/postdetail");
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles["container"]} ${blur && styles["blur"]}`}>
       <h1 className={styles.header}>
         {category.charAt(0).toUpperCase() + category.slice(1)}
       </h1>

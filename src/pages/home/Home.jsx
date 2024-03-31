@@ -2,13 +2,15 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import AppCard from "../../components/app-card/AppCard";
 import { APP_CARD_DATA } from "../../metadata/AppCardData";
 import styles from "./Home.module.css";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
+import { useBlur } from "../../context/Blur";
 
 export default function Home() {
   const slideRef = useRef();
   const FIRST_PAGE = 1, LAST_PAGE = 3;
   const [page, setPage] = useState(1);
   const [vw, setVw] = useState(0);
+  const { blur } = useBlur();
   
   const handleRightClick = () => {
     if (page === LAST_PAGE) {
@@ -28,14 +30,8 @@ export default function Home() {
     setVw((prev) => prev + 33.333333333333333);
   }
 
-  useEffect(() => {
-    console.log(`vw : ${vw}`);
-    return () => {}
-
-  },[vw])
-
   return (
-    <div className={styles.container}>
+    <div className={`${styles["container"]} ${blur && styles["blur"]}`}>
       {page !== 1 && <button className={styles.buttonleft} onClick={handleLeftClick}><FaChevronLeft className={styles.icon} /></button>}
 
       <div className={styles.middlecontainer}>

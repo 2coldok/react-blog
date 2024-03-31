@@ -2,23 +2,24 @@
   width: 50%;
   height: 80%;
   position: fixed;
-  bottom: 13%;
+  bottom: 16%;
   left: 25%;
 
   border-radius: 1rem;
   
-  color: var(--color-blog-light-grey);
+  /* color: var(--color-blog-light-grey); */
   font-weight: bolder;
   font-size: x-large;
 
-  overflow: auto;
+  /* overflow: auto; */
   padding: 0;
   
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-blog-semi-dark);
+  /* background-color: var(--color-blog-semi-dark); */
+  background-color: rgba(192, 192, 192, 0.4);
 }
 
 .form {
@@ -41,14 +42,12 @@
   height: 3rem;
   padding-left: 0.7rem;
 
-  color: var(--color-blog-light-gray);
+  /* color: var(--color-blog-light-gray); */
+  color: white;
   font-weight: bolder;
   font-size: 100%;
   outline: none;
-}
-
-.input::placeholder {
-  color: rgb(159, 159, 159);
+  caret-color: var(--color-blog-light-gray);
 }
 
 .button {
@@ -64,12 +63,12 @@
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   font-size: 100%;
-  color: rgb(151, 151, 151);
+  /* color: rgb(151, 151, 151); */
+  color: rgb(197, 202, 213);
 }
 
 .button:hover {
-  color: var(--color-accent);
-  filter: brightness(125%);
+  cursor: pointer;
 }
 
 .listsbox {
@@ -77,6 +76,11 @@
   height: 90%;
   padding-left: 1rem;
   padding-right: 1rem;
+  overflow: auto;
+}
+
+.listsbox2 {
+  width: 100%;
 }
 
 .list {
@@ -85,9 +89,10 @@
   width: 100%;
   height: 5rem;
   /* color: rgb(200, 200, 200); */
-  color: var(--color-blog-light-gray);
+  /* color: var(--color-blog-light-gray); */
+  color: rgb(211, 220, 225);
   font-weight: bolder;
-  background-color: rgba(123, 151, 174, 0.2);
+  background-color: rgba(158, 196, 228, 0.1);
   margin-top: 1rem;
 
   padding: 1.5rem;

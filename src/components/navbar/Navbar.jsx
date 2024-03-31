@@ -4,12 +4,17 @@ import SearchList from "../search-list/SearchList";
 import styles from "./Navbar.module.css";
 import NavbarCard from "../navbar-card/NavbarCard";
 import { usePortal } from "../../context/SmartPortal";
+import { useBlur } from "../../context/Blur";
 
 export default function Navbar({ issues }) {
+  const { setBlur } = useBlur();
   const { getPortalState } = usePortal();
   const [searchToggle, setSearchToggle] = useState(false);
 
-  const handleClick = () => setSearchToggle((prev) => !prev);
+  const handleClick = () => {
+    setSearchToggle((prev) => !prev);
+    setBlur((prev) => !prev);
+  }
 
   return (
     <div className={styles.container}>
