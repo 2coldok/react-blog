@@ -5,6 +5,7 @@ import Navbar from "./components/navbar/Navbar";
 import { SmartPortalProvider } from "./context/SmartPortal";
 import Introduce from "./components/introduce/Introduce";
 import "./App.css";
+import { useEffect, useState } from "react";
 
 const octokit = new Octokit({
   auth: process.env.REACT_APP_CAT.replaceAll("?", ""),
@@ -28,17 +29,21 @@ export default function App() {
     },
     staleTime: 1000 * 60 * 10,
   });
-  
+
   return (
     <div className="container">
       <SmartPortalProvider>
         {error && <p>API ERROR!</p>}
-        {isLoading && <Introduce />}
+        {/* {isLoading && <Introduce />} */}
         {!isLoading && <Outlet context={issues.data} />}
         {!isLoading && <Navbar issues={issues.data} />}
       </SmartPortalProvider>
     </div>
   );
+}
+
+function getWindowZoomPercent() {
+  return (window.outerWidth / window.innerWidth) * 100;
 }
 
 // export default App;
