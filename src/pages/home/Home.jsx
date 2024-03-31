@@ -2,7 +2,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import AppCard from "../../components/app-card/AppCard";
 import { APP_CARD_DATA } from "../../metadata/AppCardData";
 import styles from "./Home.module.css";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function Home() {
   const slideRef = useRef();
@@ -14,20 +14,25 @@ export default function Home() {
     if (page === LAST_PAGE) {
       return;
     }
-    slideRef.current.style.setProperty('transform', `translateX(${vw - 70}vw)`);
+    slideRef.current.style.setProperty('transform', `translateX(${vw - 33.333333333333333}%)`);
     setPage((prev) => prev + 1);
-    setVw((prev) => prev - 70);
+    setVw((prev) => prev - 33.333333333333333);
   }
 
   const handleLeftClick = () => {
     if (page === FIRST_PAGE) {
       return;
     }
-    slideRef.current.style.setProperty('transform', `translateX(${vw + 70}vw)`);
+    slideRef.current.style.setProperty('transform', `translateX(${vw + 33.333333333333333}%)`);
     setPage((prev) => prev - 1);
-    setVw((prev) => prev + 70);
-    
+    setVw((prev) => prev + 33.333333333333333);
   }
+
+  useEffect(() => {
+    console.log(`vw : ${vw}`);
+    return () => {}
+
+  },[vw])
 
   return (
     <div className={styles.container}>
