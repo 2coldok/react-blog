@@ -25,9 +25,6 @@ import Three from "./pages/apptegory/three/Three";
 import Jest from "./pages/apptegory/jest/Jest";
 import BlackBox from "./pages/apptegory/blackbox/BlackBox";
 
-import { MobileView } from 'react-device-detect';
-import { redirect } from 'react-router-dom';
-
 const queryClient = new QueryClient();
 
 const router = createHashRouter([
@@ -60,15 +57,6 @@ const router = createHashRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <MobileView>
-      {redirect("https://2coldok.github.io/react-shop/")}
-    </MobileView>
-
-    {/* <BrowserView>
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
-      </QueryClientProvider>
-    </BrowserView> */}
     <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
     </QueryClientProvider>
